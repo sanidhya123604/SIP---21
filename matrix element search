@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int m,n;
+    cout<<"enter the value of m and n";
+    cin>>m>>n;
+    
+    int key;
+    cout<<"enter the value of key:";
+    cin>>key;
+    
+    int arr[m][n];
+    
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }    
+    
+    int flag = 0;
+    
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(arr[i][j]==key)
+            {
+                flag = 1;
+            }
+        }
+    }
+    if(flag==1)
+    {
+        cout<<"matrix found";
+    }
+    else
+    {
+        cout<<"matrix not found";
+    }
+    return 0;
+}
